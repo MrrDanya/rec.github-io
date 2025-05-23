@@ -128,6 +128,14 @@
             border: 1px solid rgba(0,0,0,0.05);
         }
         
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        
         .tg-btn {
             display: inline-block;
             background: var(--primary);
@@ -137,11 +145,20 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1rem;
-            margin-top: 1.5rem;
             transition: all 0.3s ease;
             box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
             border: none;
             cursor: pointer;
+        }
+        
+        .tg-btn.secondary {
+            background: #3498db;
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+        }
+        
+        .tg-btn.secondary:hover {
+            background: #2980b9;
+            box-shadow: 0 6px 18px rgba(52, 152, 219, 0.4);
         }
         
         .tg-btn:hover {
@@ -203,6 +220,16 @@
             .cta-section {
                 padding: 2rem 1rem;
                 margin: 2rem 0;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tg-btn {
+                width: 100%;
+                max-width: 300px;
             }
         }
     </style>
@@ -268,7 +295,10 @@
         <section class="cta-section">
             <h2>Готов реализовать ваш проект!</h2>
             <p>Делаю качественно, быстро и с индивидуальным подходом. Работаю до полного вашего удовлетворения результатом.</p>
-            <a href="https://t.me/MrrDanya" class="tg-btn">Заказать в Telegram @MrrDanya</a>
+            <div class="btn-group">
+                <a href="https://t.me/MrrDanya" class="tg-btn">Заказать в Telegram</a>
+                <a href="https://t.me/rabdanya" class="tg-btn secondary">Мои работы</a>
+            </div>
             <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Отвечаю в течение 15 минут в рабочее время</p>
         </section>
     </main>
